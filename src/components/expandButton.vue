@@ -1,6 +1,6 @@
 <template>
-    <div class="notification is-primary is-short my-anim" :class="{'is-success':isActive}" >
-        <p><strong>{{title}}</strong></p>
+    <div class="has-background-primary is-short expand-button is-white" :class="{'has-background-success':isActive}" >
+        <p class="expand-button-title">{{title}}</p>
 
         <transition name="fade">
           <div v-if="isActive" class="notification description is-success">{{text}}</div>
@@ -28,14 +28,25 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    .my-anim{
+    .expand-button-title{
+      font-weight: bolder;
+      color: white;
+    }
+    .expand-button{
 	    transition: all 0.3s;
+      padding:10px;
+      padding-left: 50px;
+      padding-right: 50px;
+      border-radius: 5px;
+      position: relative;
     }   
     .description{
       position: absolute;
+      left: 0;
       width:200%;
       z-index: 10;
     }  
+
     .fade-enter-from, .fade-leave-to{
       opacity: 0;
     }
