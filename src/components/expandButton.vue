@@ -35,8 +35,8 @@ export default {
     .expand-button{
 	    transition: all 0.3s;
       padding:10px;
-      padding-left: 50px;
-      padding-right: 50px;
+      padding-left: 30px;
+      padding-right: 30px;
       border-radius: 5px;
       position: relative;
     }   
