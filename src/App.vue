@@ -92,14 +92,14 @@ export default {
             {name:"Vue.js", text:"It's my favorite web framework, I used it in some projects in my career.",isActive:false},
             {name:"Git", text:"I learned in my career, actually I use it for everything.",isActive:false},
             {name:"Maths", text:"I'm studing Computer Science, I learned a lot in my career, this helps me with the little bit complicated problems.",isActive:false},
-            {name:"MySql", text:"I learned in college, did some proyects, I actually use sometimes.",isActive:false},
+            {name:"Sql", text:"I learned in college, did some proyects, I actually use sometimes.",isActive:false},
             {name:"English/Spanish", text:"I native spanish speaker, but I can speak with others in English.",isActive:false},
         ], 
         lastSkillIndex:null,
         projects:[
-            {name:"First Year College Programing Project",text: "I used C# for everything, I made an interpeter for a gived language."},
-            {name:"Software Engenering",text: "We made a site for 'selling' movie tikets, we use C# and basic html/css."},
-            {name:"Data Base Project",text: "We made a site to represents the interaction of a Village (Naruto Based), we used Python (Django) for the whole site."},
+            {name:"First Year College Programing Project",text: "I used C# for everything, I made an interpreter for a gived language."},
+            {name:"Software Engenering",text: "We made a site for 'selling' movie tikets, we use C#, basic html/css and MySql data base."},
+            {name:"Data Base Project",text: "We made a site to represents the interaction of a Village (Naruto Based), we used Python (Django) for the whole site and MySql data base."},
             {name:"Data Recovery Systems",text: "We made a Searcher call 'Gugul', the backend was made in Flask and the frontend was made in Vue.js."},
             {name:"Compilers/IA/Simulation Project",text: "We made a network simulator that use a defined language and use IA tecnics, was made in C#."},
 
