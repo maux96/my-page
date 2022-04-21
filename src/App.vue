@@ -22,7 +22,7 @@
             <div>
                 I live in Matanzas, Cuba. I'm currently studing Computer Science in Havana University, <br>
                 In my free time I learn new stuff that calls my atention or program something intresting (to me) (usualy in python). <br>
-                Long time ago I learn basic HTML/CSS/JavaScript and I'm using it right now with Vue.js.
+                Long time ago I learned basic HTML/CSS/JavaScript and I'm using it right now with Vue.js.
                 <br>
                 <div class="mt-2">
                     <a href="https://github.com/maux96">Github</a> | 
@@ -36,7 +36,7 @@
             <div class="columns">
                 <div class="column is-4">
                     <div class="is-flex is-align-items-baseline">
-                        <h2 class="title size-3">Skills </h2><p class="has-text-primary">click it!</p>
+                        <h2 class="title size-3">Skills </h2> <p class="has-text-primary ml-2">click it!</p>
                     </div>
                     <div class="is-flex is-align-items-baseline is-flex-wrap-wrap">
                     <ExpandButton class="ml-1 mb-1"  v-for="skill,i in skills" @click="changeSkillState(i)" :key="i" :title="skill.name" :text="skill.text" :isActive="skill.isActive" ></ExpandButton>
@@ -97,7 +97,7 @@ export default {
         ], 
         lastSkillIndex:null,
         projects:[
-            {name:"First Year College Programing Project",text: "I used C# for everything, I made an interpreter for a gived language."},
+            {name:"First Year College Programing Project",text: "I used C# for everything, I made an interpreter for a given language."},
             {name:"Software Engenering",text: "We made a site for 'selling' movie tikets, we use C#, basic html/css and MySql data base."},
             {name:"Data Base Project",text: "We made a site to represents the interaction of a Village (Naruto Based), we used Python (Django) for the whole site and MySql data base."},
             {name:"Data Recovery Systems",text: "We made a Searcher call 'Gugul', the backend was made in Flask and the frontend was made in Vue.js."},
