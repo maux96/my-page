@@ -94,7 +94,7 @@ export default {
             {name:"Git", text:"I learned in my career, actually I use it for everything.",isActive:false},
             {name:"Maths", text:"I'm studing Computer Science, I learned a lot in my career, this helps me with the little bit complicated problems.",isActive:false},
             {name:"Sql", text:"I learned in college, did some proyects, I actually use sometimes.",isActive:false},
-            {name:"English/Spanish", text:"I native spanish speaker, but I can speak with others in English.",isActive:false},
+            {name:"English/Spanish", text:"I am native spanish speaker, but I can comunicate with others in English, read, write and understand bibliography.",isActive:false},
         ], 
         lastSkillIndex:null,
         projects:[
