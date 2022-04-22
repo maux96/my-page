@@ -1,5 +1,6 @@
 <template> 
     <div>
+	<div class="blocker-for-skill" v-if="lastSkillIndex!=null" @click="changeSkillState(lastSkillIndex)"></div>
         <div class="hero is-primary is-large">
             <div class="hero-body">
                 <h1 class="title is-2" > Hi, I'm Mauricio Mahmud</h1>
@@ -21,7 +22,7 @@
             </div>
             <div>
                 I live in Matanzas, Cuba. I'm currently studing Computer Science in Havana University, <br>
-                In my free time I learn new stuff that calls my atention or program something intresting (to me) (usualy in python). <br>
+                In my free time I learn new stuff that calls my atention or program something intresting. <br>
                 Long time ago I learned basic HTML/CSS/JavaScript and I'm using it right now with Vue.js.
                 <br>
                 <div class="mt-2">
@@ -109,7 +110,8 @@ export default {
   methods:{
       changeSkillState(index){
             if(this.lastSkillIndex == index){
-                this.skills[index].isActive=!this.skills[index].isActive;
+                this.skills[index].isActive=false;
+		this.lastSkillIndex=null;
             }else{
                 this.skills[index].isActive=true;
                 if(this.lastSkillIndex!=null)
@@ -129,4 +131,13 @@ export default {
 
 <style>
     @import 'bulma/css/bulma.css';
+
+    .blocker-for-skill{
+	top:0px;
+	left:0px;
+	width:100%;	
+	height:100%;
+	/*background-color:red;*/
+	position:fixed;
+    }
 </style>

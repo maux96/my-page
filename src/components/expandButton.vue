@@ -33,7 +33,7 @@ export default {
       color: white;
     }
     .expand-button{
-	    transition: all 0.3s;
+      transition: all 0.3s;
       padding:10px;
       padding-left: 30px;
       padding-right: 30px;
