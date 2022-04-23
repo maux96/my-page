@@ -3,8 +3,12 @@
 	<div class="blocker-for-skill" v-if="lastSkillIndex!=null" @click="changeSkillState(lastSkillIndex)"></div>
         <div class="hero is-primary is-large">
             <div class="hero-body">
-                <h1 class="title is-2" > Hi, I'm Mauricio Mahmud</h1>
-                <p class="subtitle"> ...computer scientist in progress, currently doing some Web stuff...</p>
+                <transition-group name="grow">
+                    <h1 v-if="_isInitial.title" class="title is-2" > Hi, I'm Mauricio Mahmud</h1>
+                    <h1 v-else class="title is-2" > &nbsp;</h1>
+                    <p v-if="_isInitial.subtitle" class="subtitle"> ...computer scientist in progress, currently doing some Web stuff...</p>
+                    <h1 v-else class="subtitle is-2" >&nbsp; </h1>
+                </transition-group>
             </div>
         </div>
 
@@ -104,7 +108,8 @@ export default {
             {name:"Data Recovery Systems",text: "We made a Searcher call 'Gugul', the backend was made in Flask and the frontend was made in Vue.js."},
             {name:"Compilers/IA/Simulation Project",text: "We made a network simulator that use a defined language and use IA tecnics, was made in C#."},
 
-        ]
+        ],
+        _isInitial:{title:false, subtitle:false},
     } 
   }, 
   methods:{
@@ -124,7 +129,16 @@ export default {
     ExpandButton,
   },
   mounted(){
-    document.title="maux96"
+    document.title="maux96";
+    let temp = this;
+    setTimeout(function(){
+        temp._isInitial.title = true;
+    }, 500);
+    setTimeout(function(){
+        temp._isInitial.subtitle = true;
+    }, 800);
+
+
   }
 }
 </script>
@@ -140,4 +154,16 @@ export default {
 	/*background-color:red;*/
 	position:fixed;
     }
+
+    .grow-enter-from{
+        opacity:0;
+        transform: translateY(50px); 
+    }
+    .grow-enter-to{
+        opacity:1;
+    }
+    .grow-enter-active{
+        transition: all 0.8s;
+    }
 </style>
+
