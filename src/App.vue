@@ -1,42 +1,49 @@
-<template> 
+<template>
     <div>
-	<div class="blocker-for-skill" v-if="lastSkillIndex!=null" @click="changeSkillState(lastSkillIndex)"></div>
-        <div class="hero is-primary is-large">
-            <div class="hero-body">
-                <transition-group name="grow">
-                    <h1 v-if="_isInitial.title" class="title is-2" > Hi, I'm Mauricio Mahmud</h1>
-                    <h1 v-else class="title is-2" > &nbsp;</h1>
-                    <p v-if="_isInitial.subtitle" class="subtitle"> ...computer scientist in progress, currently doing some Web stuff...</p>
-                    <h1 v-else class="subtitle is-2" >&nbsp; </h1>
-                </transition-group>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="is-flex mb-4">
-                <div class="mr-2">
-                    <figure class="image is-64x64 ">
-                        <img class="is-rounded" src="https://avatars.githubusercontent.com/u/39928836?v=4">
-                    </figure> 
-                </div> 
-                <div>
-                    <h2 class="title size-3">Some words about me</h2>
-                    <p class="subtitle">Hi, my name is Mauricio Salim Mahmud Sánchez,</p>
+        <div class="blocker-for-skill" v-if="lastSkillIndex!=null" @click="changeSkillState(lastSkillIndex)"></div>
+            <div class="hero is-primary p-6" :class="{ 'is-medium' : !_isInitial.banner_picture || !_isInitial.banner_title || !_isInitial.banner_subtitle || !_isInitial.banner_texts}"   >
+                <div class="hero-body"> 
+                    <div class="is-flex mb-4 is-flex-wrap-wrap is-align-items-center" >
+                        <div class="mr-2">
+                            <transition name="grow">
+                                <figure v-if="_isInitial.banner_picture" class="image is-64x64 ">
+                                    <img class="is-rounded" src="https://avatars.githubusercontent.com/u/39928836?v=4">
+                                </figure> 
+                            </transition>
+                        </div> 
+                        <div>
+                            <transition-group name="grow">
+                                <h1 v-if="_isInitial.banner_title" class="title is-2" > Hi, I'm Mauricio Mahmud</h1>
+                                    <p v-if="_isInitial.banner_subtitle" class="subtitle"> ...computer scientist in progress, currently doing some Web stuff... </p>
+                                    
+                            </transition-group>
+                        </div>
+                    </div>
+                    <div>
+                        <transition name="grow">
+                            <div v-if="_isInitial.banner_texts">
+                                I live in Matanzas, Cuba. I'm currently studing Computer Science in Havana University, <br>
+                                In my free time I learn new stuff that calls my atention or program something intresting. <br>
+                                Long time ago I learned basic HTML/CSS/JavaScript and I'm using it right now with Vue.js.
+                            </div>
+                        </transition>
+                        <br>
+                        <div class="mt-2">
+                            <transition-group name="grow">
+                                <div v-if="_isInitial.banner_texts">
+                                    <a href="https://github.com/maux96">Github</a> |  
+                                    <a href="https://twitter.com/mauxriciom">Twitter</a> |
+                                    <a href="https://t.me/maux96">Telegram</a>
+                                </div>
+                            </transition-group>
+                       </div>
+                    </div>
+                
                 </div>
+
+
             </div>
-            <div>
-                I live in Matanzas, Cuba. I'm currently studing Computer Science in Havana University, <br>
-                In my free time I learn new stuff that calls my atention or program something intresting. <br>
-                Long time ago I learned basic HTML/CSS/JavaScript and I'm using it right now with Vue.js.
-                <br>
-                <div class="mt-2">
-                    <a href="https://github.com/maux96">Github</a> | 
-                    <a href="https://twitter.com/mauxriciom">Twitter</a> |
-                    <a href="https://t.me/maux96">Telegram</a>
-               </div>
-            </div>
-        </div>
-        <hr>  
+
         <div class="section">
             <div class="columns">
                 <div class="column is-4">
@@ -109,7 +116,7 @@ export default {
             {name:"Compilers/IA/Simulation Project",text: "We made a network simulator that use a defined language and use IA tecnics, was made in C#."},
 
         ],
-        _isInitial:{title:false, subtitle:false},
+        _isInitial:{}, //for animation :D
     } 
   }, 
   methods:{
@@ -131,13 +138,21 @@ export default {
   mounted(){
     document.title="maux96";
     let temp = this;
-    setTimeout(function(){
-        temp._isInitial.title = true;
-    }, 500);
-    setTimeout(function(){
-        temp._isInitial.subtitle = true;
-    }, 800);
 
+
+    setTimeout(function(){
+        temp._isInitial.banner_picture = true;
+    }, 500);
+
+    setTimeout(function(){
+        temp._isInitial.banner_title = true;
+    }, 700);
+    setTimeout(function(){
+        temp._isInitial.banner_subtitle = true;
+    }, 900);
+    setTimeout(function(){
+        temp._isInitial.banner_texts = true;
+    }, 1000);
 
   }
 }
@@ -147,12 +162,12 @@ export default {
     @import 'bulma/css/bulma.css';
 
     .blocker-for-skill{
-	top:0px;
-	left:0px;
-	width:100%;	
-	height:100%;
-	/*background-color:red;*/
-	position:fixed;
+        top:0px;
+        left:0px;
+        width:100%;	
+        height:100%;
+        /*background-color:red;*/
+        position:fixed;
     }
 
     .grow-enter-from{
@@ -166,4 +181,7 @@ export default {
         transition: all 0.8s;
     }
 </style>
+
+
+
 
