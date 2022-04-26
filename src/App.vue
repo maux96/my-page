@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="blocker-for-skill" v-if="lastSkillIndex!=null" @click="changeSkillState(lastSkillIndex)"></div>
-            <div class="hero is-primary p-6" :class="{ 'is-medium' : !_isInitial.banner_picture || !_isInitial.banner_title || !_isInitial.banner_subtitle || !_isInitial.banner_texts}"   >
+            <div class="hero is-primary is-medium">
                 <div class="hero-body"> 
                     <div class="is-flex mb-4 is-flex-wrap-wrap is-align-items-center" >
                         <div class="mr-2">
