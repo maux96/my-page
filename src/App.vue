@@ -22,8 +22,8 @@
                     <div>
                         <transition name="grow">
                             <div v-if="_isInitial.banner_texts">
-                                I live in Matanzas, Cuba. I'm currently studing Computer Science in Havana University, <br>
-                                In my free time I learn new stuff that calls my atention or program something intresting. <br>
+                                I live in Matanzas, Cuba. I'm currently studying Computer Science in Havana University, <br>
+                                In my free time I learn new stuff that calls my attention or program something interesting. <br>
                                 Long time ago I learned basic HTML/CSS/JavaScript and I'm using it right now with Vue.js.
                             </div>
                         </transition>
@@ -33,7 +33,8 @@
                                 <div v-if="_isInitial.banner_texts">
                                     <a href="https://github.com/maux96">Github</a> |  
                                     <a href="https://twitter.com/mauxriciom">Twitter</a> |
-                                    <a href="https://t.me/maux96">Telegram</a>
+                                    <a href="https://t.me/maux96">Telegram</a> | 
+                                    <a href="https://www.linkedin.com/in/mauricio-mahmud-s%C3%A1nchez-bbab27167/">LinkedIn</a>
                                 </div>
                             </transition-group>
                        </div>
@@ -82,6 +83,8 @@
           <a href="https://twitter.com/mauxriciom">Twitter</a>
             |
           <a href="https://t.me/maux96">Telegram</a>
+            |
+          <a href="https://www.linkedin.com/in/mauricio-mahmud-s%C3%A1nchez-bbab27167/">LinkedIn</a>
         </p>
       </div>
     </footer>
